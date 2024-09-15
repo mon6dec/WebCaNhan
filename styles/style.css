@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+header{
+    margin-top: 0px;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: black;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+
+    font-size: 2rem;
+    color: #189cda;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active{
+    color: #189cda;
+    border-bottom: 3px solid #189cda;
+}
+
+@media(max-width:995px){
+    nav{
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid #189cda;
+        border-bottom: 3px solid #189cda;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0,0,0,0.1);
+    }
+
+    nav.active{
+        display: block;
+    }
+
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #189cda;
+    }
+}
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: black;
+}
+
+.home .home-content h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+span{
+    color: #189cda;
+}
+
+.home-content h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-content p{
+    font-size: 1.6rem;
+}
+
+.home-img{
+    border-radius: 50%;
+}
+
+.home-img img{
+    position: relative;
+    width: 25vw;
+    border-radius: 50%;
+   /* box-shadow: 0 0 25px solid #189cda; */
+    box-shadow: 0px 0px 10px 5px rgba(24, 156, 218, 0.5);
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #189cda;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: #189cda;
+}
+
+.social-icons a:hover{
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    background-color: #189cda;
+    box-shadow: 0  0 25px #189cda;
+}
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: #189cda;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid #189cda;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover{
+    transform: scale3d(1.03);
+    background-color: #189cda;
+    color: black;
+    box-shadow: 0 0 25px #189cda;
+}
+
+.typing-text{
+    font-size: 30px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span{
+    position: relative;
+}
+
+
+.typing-text span::after{
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 80%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid #189cda;
+    }
+}
+
+
+@media (max-width: 1000px){
+    .home{
+        gap: 4rem;
+    }
+}
+
+@media(max-width:995px){
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+
+    .home-content h1{
+        font-size: 5rem;
+    }
+
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
+/*Education*/
+h2{
+    font-size: 35px;
+    margin-bottom: 50px;
+}
+.education {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+}
+
+.education-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    place-items: center;
+}
+
+.project {
+    width: 30%;
+    margin-bottom: 30px;
+    background-color: #131314;
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.project img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.icons i {
+    margin: 0 5px;
+}
+.btnEdu{
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    background-color: #131314;
+    border-radius: 0.8rem;
+    font-size: 1rem;
+    color: #189cda;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid #189cda;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btnEdu:hover{
+    transform: scale3d(1.03);
+    background-color: #189cda;
+    color: black;
+    box-shadow: 0 0 25px #189cda;
+}
+.title-edu{
+    font-size: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+/* Contact*/
+.contact {
+    padding: 20px;
+    background-color: black; /* Nền tối màu */
+    color: #fff; /* Màu chữ trắng */
+}
+
+.contact h2 {
+    text-align: center;
+    color: #fff;
+}
+
+.contact form {
+    margin-top: 20px;
+}
+
+.contact label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555; /* Viền ô */
+    border-radius: 5px; /* Bo góc 5px */
+    background-color: #333; /* Nền ô */
+    color: #fff;
+}
+
+.contact button {
+    display: block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px; /* Bo góc nút */
+    cursor: pointer;
+}
