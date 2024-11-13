@@ -281,7 +281,14 @@ h2{
     margin-left: 5px;
     margin-right: 5px;
 }
-
+.project-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1; /* Tạo hình vuông */
+    border-radius: 10px; /* Bo góc cho hình ảnh */
+    object-fit: cover; /* Đảm bảo hình ảnh bao phủ toàn bộ khung */
+    margin-bottom: 15px; /* Khoảng cách dưới hình ảnh */
+}
 .project img {
     max-width: 100%;
     border-radius: 5px;
@@ -347,9 +354,9 @@ h2{
 .contact textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #555; /* Viền ô */
+    border: 1px solid #000000; /* Viền ô */
     border-radius: 5px; /* Bo góc 5px */
-    background-color: #333; /* Nền ô */
+    background-color: #000000; /* Nền ô */
     color: #fff;
 }
 
@@ -362,4 +369,54 @@ h2{
     border: none;
     border-radius: 5px; /* Bo góc nút */
     cursor: pointer;
+}
+
+.contact {
+    background-color: #000000;
+    padding: 40px;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-top: 50px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    color: #fff;
+}
+
+.contact-title {
+    text-align: center;
+    font-size: 3rem;  /* Tăng kích thước chữ của tiêu đề */
+    margin-bottom: 30px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;  /* Kích thước chữ cho thông tin liên hệ */
+}
+
+.info-item {
+    margin-bottom: 30px;  /* Khoảng cách giữa các mục */
+    display: flex;
+    align-items: center;
+}
+
+.info-item i {
+    font-size: 3rem;  /* Tăng kích thước icon */
+    margin-right: 15px;
+    color: #4f94e3;
+}
+
+.info-item p {
+    font-size: 2rem;  /* Kích thước chữ lớn hơn cho văn bản */
+}
+
+.info-item a {
+    color: #4f94e3;
+    text-decoration: none;
+    font-size: 2rem;  /* Kích thước chữ liên kết */
+}
+
+.info-item a:hover {
+    text-decoration: underline;
 }
